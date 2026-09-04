@@ -1,1 +1,0 @@
-import{c as e,i as t,o as n,t as r}from"./index-BxW6D4n6.js";var i={};function a(r,i){return e(),n(`section`,null,[...i[0]||=[t(`h1`,null,`School Projects`,-1),t(`p`,null,`Here is a list of the projects I made during my bachelor and masters degree.`,-1),t(`p`,null,`This page is a work in progress`,-1)]])}var o=r(i,[[`render`,a]]);export{o as default};
