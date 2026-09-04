@@ -11,8 +11,8 @@
     "lint:oxlint": "oxlint . --fix",
     "lint:eslint": "eslint . --fix --cache",
     "format": "prettier --write --experimental-cli src/",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist --clean"
+    "predeploy": "powershell -Command \"if (Test-Path node_modules/.cache/gh-pages) { Remove-Item -Recurse -Force node_modules/.cache/gh-pages }\" && npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "vue": "rc",
