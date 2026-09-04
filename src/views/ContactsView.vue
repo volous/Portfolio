@@ -158,6 +158,7 @@ const handleSubmit = async () => {
   errorMessage.value = ''
 
   const formId = import.meta.env.VITE_FORMSPREE_FORM_ID
+  console.log(formId)
   if (!formId) {
     errorMessage.value = 'Form ID ENV variable missing.'
     isSubmitting.value = false

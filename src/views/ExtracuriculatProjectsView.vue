@@ -4,5 +4,6 @@
     <p>
       Here is a list of what projects I have worked on in my spare time, both ongoing and finished.
     </p>
+    <p>This page is a work in progress</p>
   </section>
 </template>
