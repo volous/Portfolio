@@ -1,1 +1,0 @@
-import{c as e,i as t,o as n,t as r}from"./index-CibWWF-I.js";var i={};function a(r,i){return e(),n(`section`,null,[...i[0]||=[t(`h1`,null,`My Projects`,-1),t(`p`,null,`Here are some of the things I've built.`,-1)]])}var o=r(i,[[`render`,a]]);export{o as default};
