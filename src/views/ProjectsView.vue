@@ -60,41 +60,10 @@
                 This will also include each of the apps app home pages, which are a dashboard inside
                 of Shopify that allows for easy integration and viewing various data.
               </p>
-            </div>
-            <div class="grid-box">
-              <h3>3D Dressing Room</h3>
               <p>
-                This project was the initial one I started working on. Because I had extensive Unity
-                experience and this is what the project is made with.
+                Since utry is a small startup, I am not only part of the development team, but also
+                had to work as a UX'er, and quality assurance.
               </p>
-              <p>
-                During my first week, I managed to get UTRY from being able to only show this as a
-                concept, to actually loading the Unity web app as an Iframe inside of shopify.
-              </p>
-              <p>
-                The next part of this project was getting the 3D models out of the azure storage and
-                viewed inside of the web app.
-              </p>
-              <h3>App home page</h3>
-              <p>
-                Since this was the first time I had to implement the app home page, there was a lot
-                of troubles figuring out how to work with shopify. At this point shopify's
-                documentation was in a transitional phase, so figuring out how to propperly
-                implement it was a lot of work - Of looking through various community posts, to find
-                what would actually work.
-              </p>
-              <p>Some of the notable implementations I made:</p>
-              <ul class="implement-list">
-                <li>
-                  Graph that showed usages over time - Controllable with a custom implemented
-                  calendar.
-                </li>
-                <li>Custom implemented callendar - Selectable range.</li>
-                <li>
-                  Get various data from the database, but caching a years worth of data instead of
-                  making many small queries
-                </li>
-              </ul>
             </div>
             <div class="grid-box">
               <h3>AI Virtual Try-On</h3>
@@ -124,6 +93,7 @@
                 <li>Return Rate</li>
                 <li>Integration guide</li>
                 <li>Control panel - Disable and enable app on each store item.</li>
+                <li>Enable and disable the app on specific items.</li>
               </ul>
               <p>
                 A lot of this was grabbing the calculated data from the backend, and ensuring that
@@ -157,8 +127,63 @@
                   Set metafields on the items with measurements to tell app what measurements should
                   be used.
                 </li>
-                <li></li>
               </ul>
+            </div>
+            <div class="grid-box">
+              <h3>3D Dressing Room</h3>
+              <p>
+                This project was the initial one I started working on. Because I had extensive Unity
+                experience and this is what the project is made with.
+              </p>
+              <p>
+                During my first week, I managed to get UTRY from being able to only show this as a
+                concept, to actually loading the Unity web app as an Iframe inside of shopify.
+              </p>
+              <p>
+                The next part of this project was getting the 3D models out of the azure storage and
+                viewed inside of the web app.
+              </p>
+              <h3>App home page</h3>
+              <p>
+                Since this was the first time I had to implement the app home page, there was a lot
+                of troubles figuring out how to work with shopify. At this point shopify's
+                documentation was in a transitional phase, so figuring out how to propperly
+                implement it was a lot of work - Of looking through various community posts, to find
+                what would actually work.
+              </p>
+              <p>Here I implemented the following:</p>
+              <ul class="implement-list">
+                <li>Responsive UI - Mobile and Desktop</li>
+                <li>Ensuring that the UI would overlay the correct product image.</li>
+                <li>Getting the correct 3D model for the clothing item</li>
+              </ul>
+              <p>Some of the notable implementations I made:</p>
+              <ul class="implement-list">
+                <li>
+                  Graph that showed usages over time - Controllable with a custom implemented
+                  calendar.
+                </li>
+                <li>Custom implemented callendar - Selectable range.</li>
+                <li>
+                  Get various data from the database, but caching a years worth of data instead of
+                  making many small queries
+                </li>
+              </ul>
+            </div>
+            <div class="grid-box project-grid-title">
+              <h2>Machine Learning project</h2>
+              <div class="grid-box project-grid-title">
+                <p>
+                  For the clothing size algorithm we wanted to make it as easy as possible for the
+                  user to get their size recommendation. So one of the side projects I was assigned
+                  was to figure out how to minimize the friction of the app.
+                </p>
+                <p>
+                  Here I implemented a machine learning model, which in the end was able to come
+                  within 0.2 cm of a users actual measurements. I did this by infering the users
+                  body shape from a set of questions, and take 2 measurements instead.
+                </p>
+              </div>
             </div>
             <div class="grid-box project-grid-title">
               <h2>Admin Dashboard</h2>
@@ -167,41 +192,60 @@
                 There where several cycles of implementation, and I will go through what I did
                 overall.
               </p>
+              <div class="grid-box project-grid-title">
+                <p>A menu per store, where you could make custom plans for them</p>
+                <p>This also allowed to view what clothes each store had configured.</p>
+                <p>
+                  A way for UTRY to insert clothing data instead of a store doing it in their app
+                  home page.
+                </p>
+                <p>
+                  A way for us to take in PDF and CSV files and read the data inside of them and
+                  automatically extract the measurement information for each clothing per size. This
+                  integrated .net 9 and Python together, since Python has some strong tools for
+                  this.
+                </p>
+                <p>
+                  Adding shopify payment plans, which could either be the "standard" plans that
+                  everyone installing the app can see. But also custom plans which would be
+                  attributed to specific stores and only that store can see them and subscribe to.
+                </p>
+              </div>
             </div>
-            <div class="grid-box project-grid-title">
-              <p>A menu per store, where you could make custom plans for them</p>
-              <p>This also allowed to view what clothes each store had configured.</p>
-              <p>
-                A way for UTRY to insert clothing data instead of a store doing it in their app home
-                page.
-              </p>
-              <p>
-                A way for us to take in PDF and CSV files and read the data inside of them and
-                automatically extract the measurement information for each clothing per size. This
-                integrated .net 9 and Python together, since Python has some strong tools for this.
-              </p>
-            </div>
+
             <div class="grid-box project-grid-title">
               <h2>Backend</h2>
               <p>
                 In this section I will talk in depth about what I did on each of the backend parts
                 of the Shopify apps of utry.
               </p>
-            </div>
-            <div class="grid-box project-grid-title">
-              <p>
-                The backend of UTRY is made with .net 9 and EF core, using various other tools such
-                as docker. Where it is hosted on Azure, while my experience with Azure is not quite
-                where I want it to be, I do know how to set and update the keyvault.
-              </p>
-              <p>
-                We also had a CI/CD pipeline set up such that our staging and production environment
-                is protected from random pushes and pull requests.
-              </p>
-              <p>
-                A large amount of the work I put in initially into the backend was designing and
-                modelling the database.
-              </p>
+              <div class="grid-box project-grid-title">
+                <p>
+                  The backend of UTRY is made with .net 9 and EF core, using various other tools
+                  such as docker. Where it is hosted on Azure, while my experience with Azure is not
+                  quite where I want it to be, I do know how to set and update the keyvault. As well
+                  as how to handle updating the API through the correct steps with pull requests.
+                </p>
+                <p>
+                  We also had a CI/CD pipeline set up such that our staging and production
+                  environment is protected from random pushes and pull requests.
+                </p>
+                <p>
+                  A large amount of the work I put in initially into the backend was designing and
+                  modelling the database.
+                </p>
+                <br />
+                <p>
+                  My main tasks on the backend was to implement secure ways for shopify stores to
+                  integrate our app, ensuring that no one could pretend to be that store.
+                </p>
+                <p>Create unit tests for all of our codebase.</p>
+                <p>Go through the correct OAuth flow of shopify for apps.</p>
+                <p>
+                  Ensure that functionalities of the entire flow worked in our localhosted
+                  environments as well as in staging and production.
+                </p>
+              </div>
             </div>
           </div>
         </div>
