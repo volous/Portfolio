@@ -1,5 +1,6 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+import DuckComponent from './components/DuckComponent.vue'
 </script>
 
 <template>
@@ -36,6 +37,14 @@ import { RouterLink, RouterView } from 'vue-router'
           </div>
         </div>
         <RouterLink to="/contact">Contact</RouterLink>
+        <DuckComponent
+          :size="40"
+          color="#3eaf7c"
+          position="absolute"
+          top="10px"
+          right="120px"
+          strokeWidth="20"
+        />
       </nav>
 
       <!-- Brand Logo / Name -->
@@ -115,12 +124,6 @@ import { RouterLink, RouterView } from 'vue-router'
   height: 2px;
   background-color: #3eaf7c;
   border-radius: 2px;
-}
-
-.main-content {
-  max-height: 100dvh;
-  margin: 0 auto;
-  padding: 2rem 1.5rem;
 }
 
 .dropdown {
@@ -206,6 +209,6 @@ import { RouterLink, RouterView } from 'vue-router'
 .main-content {
   max-height: 100dvh;
   margin: 0 auto;
-  padding: 2rem 1.5rem;
+  padding: 1rem 1.5rem;
 }
 </style>

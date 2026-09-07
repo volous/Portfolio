@@ -1,4 +1,5 @@
 <script setup>
+import DuckComponent from '@/components/DuckComponent.vue'
 import { RouterLink } from 'vue-router'
 </script>
 
@@ -14,16 +15,14 @@ import { RouterLink } from 'vue-router'
       </div>
       <!-- Main Headline -->
       <div class="hero-title-container">
-        <h1 class="hero-title">
-          Hi, I'm <span class="highlight">Thomas Lindhardt</span>.<br />
-          I build full-stack web applications.
-        </h1>
+        <h1 class="hero-title">Hi, I'm <span class="highlight">Thomas Lindhardt.</span></h1>
         <img class="image" src="/public/image/Thomas.png" />
         <!-- Short Bio -->
         <p class="hero-bio">
           <!-- Software developer specializing in modern frontend systems and C# / .NET backends. Focused
           on crafting clean, performant interfaces and scalable digital experiences. -->
-          Software developer with a wide variety of skills.
+          Fullstack software developer with a wide variety of skills. <br />
+          Such as <span class="highlight">.Net, JavaScript, css, html, REST and Docker.</span>
         </p>
       </div>
     </div>
@@ -52,7 +51,7 @@ import { RouterLink } from 'vue-router'
 
       <!-- External GitHub Link -->
       <a
-        href="https://github.com"
+        href="https://github.com/volous"
         target="_blank"
         rel="noopener noreferrer"
         class="btn btn-icon"
@@ -75,6 +74,14 @@ import { RouterLink } from 'vue-router'
           <path d="M9 18c-4.51 2-5-2-7-2"></path>
         </svg>
       </a>
+    </div>
+
+    <div class="project-grid-main">
+      <h3>What am i working on currently?</h3>
+      <ul class="implement-list">
+        <li>This website.</li>
+        <li>Danish translation of this website.</li>
+      </ul>
     </div>
   </section>
 </template>
@@ -158,6 +165,7 @@ import { RouterLink } from 'vue-router'
   line-height: 1.6;
   color: #a1a1aa;
   max-width: 650px;
+  text-align: center;
 }
 
 /* Action Buttons Group */
@@ -239,5 +247,24 @@ import { RouterLink } from 'vue-router'
     flex: 1;
     justify-content: center;
   }
+}
+
+.utry-projects-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+/* Big container card with custom color */
+.project-grid-main {
+  grid-column: 1;
+  background-color: #1e2424; /* Distinct background color */
+  border: 1px solid #535a5a; /* Subtle border */
+  border-radius: 12px;
+  padding: 49px;
+}
+
+.implement-list {
+  padding-left: 1.4rem;
 }
 </style>

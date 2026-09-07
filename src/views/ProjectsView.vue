@@ -4,7 +4,6 @@
   <section class="content">
     <div class="header-section">
       <h1>Work Projects</h1>
-      <p>Here are some of the things I've built.</p>
     </div>
     <div class="utry-section-container">
       <div class="utry-projects-grid">
@@ -52,10 +51,10 @@
           <!-- Inner nested grid for the project sub-cards -->
           <div class="nested-projects-grid">
             <div class="grid-box project-grid-title">
-              <h3>UTRY Frontend projects</h3>
+              <h2>Frontend</h2>
               <p>
                 In this section I will talk in depth about what I did on each of the frontend parts
-                of the Shopify apps of utry
+                of the Shopify apps of utry.
               </p>
               <p>
                 This will also include each of the apps app home pages, which are a dashboard inside
@@ -76,13 +75,133 @@
                 The next part of this project was getting the 3D models out of the azure storage and
                 viewed inside of the web app.
               </p>
+              <h3>App home page</h3>
+              <p>
+                Since this was the first time I had to implement the app home page, there was a lot
+                of troubles figuring out how to work with shopify. At this point shopify's
+                documentation was in a transitional phase, so figuring out how to propperly
+                implement it was a lot of work - Of looking through various community posts, to find
+                what would actually work.
+              </p>
+              <p>Some of the notable implementations I made:</p>
+              <ul class="implement-list">
+                <li>
+                  Graph that showed usages over time - Controllable with a custom implemented
+                  calendar.
+                </li>
+                <li>Custom implemented callendar - Selectable range.</li>
+                <li>
+                  Get various data from the database, but caching a years worth of data instead of
+                  making many small queries
+                </li>
+              </ul>
             </div>
             <div class="grid-box">
               <h3>AI Virtual Try-On</h3>
-              <p>This is the next project</p>
+              <p>This is the next project that UTRY Started up.</p>
+              <p>
+                An app that helps shoppers, so that they can see what a piece of clothing looks like
+                before buying it. This interfaced with first simply Googles flash image API, which
+                was later moved over to Googles Agentic try-on instead.
+              </p>
+              <p>On this project I mainly worked on the backend and the app home page.</p>
+              <p>
+                A lot of the work was to make sure that the implementation matched our designers
+                design. As well as figuring out
+              </p>
+              <h3>App home page</h3>
+              <p>
+                Since this was the second time I implemented the app home page, it was a lot easier.
+                But during implementation, UTRY decided to move from using pure JavaScript over to
+                use Vue.js to implement frontend with.
+              </p>
+              <p>
+                So a large part of this was to translate all we had done already into vue. And
+                adding new content and metrics viewable by the user. such as:
+              </p>
+              <ul class="implement-list">
+                <li>Conversion rate</li>
+                <li>Return Rate</li>
+                <li>Integration guide</li>
+                <li>Control panel - Disable and enable app on each store item.</li>
+              </ul>
+              <p>
+                A lot of this was grabbing the calculated data from the backend, and ensuring that
+                it was the data from the date range selected by the user.
+              </p>
             </div>
             <div class="grid-box">
               <h3>Clothing size algorithm</h3>
+              <p>
+                The third project of UTRY, which is a way for customers to get an estimated size
+                from a piece of clothing. Which used measurements from the seller/manufacturer of
+                clothes with measurements from the end user to give them a suggested size.
+              </p>
+              <p>
+                This used firstly a mathematical algorithm, that took size, stretch and comfort into
+                a factor to give a score on each available size, per measurement. So a t-shirt could
+                have a collection of 3 scores for, chest, waist and shoulder. Where each score for
+                each size would be sent into Gemini through Google's API, to give a more natural
+                feedback to the enduser instead of just raw math.
+              </p>
+              <h3>App home page</h3>
+              <p>
+                The main task with this was to reproduce the AI Virtual Try-Ons' app home page, but
+                with added functionality. These where:
+              </p>
+              <ul class="implement-list">
+                <li>Easy way of inserting measurements for single and multiple clothing items.</li>
+                <li>Easy way of getting an overview of what clothing has measurements and not.</li>
+                <li>Enable and disable the app on specific items.</li>
+                <li>
+                  Set metafields on the items with measurements to tell app what measurements should
+                  be used.
+                </li>
+                <li></li>
+              </ul>
+            </div>
+            <div class="grid-box project-grid-title">
+              <h2>Admin Dashboard</h2>
+              <p>
+                We needed a way to handle various aspects of a store, such as their payment plans.
+                There where several cycles of implementation, and I will go through what I did
+                overall.
+              </p>
+            </div>
+            <div class="grid-box project-grid-title">
+              <p>A menu per store, where you could make custom plans for them</p>
+              <p>This also allowed to view what clothes each store had configured.</p>
+              <p>
+                A way for UTRY to insert clothing data instead of a store doing it in their app home
+                page.
+              </p>
+              <p>
+                A way for us to take in PDF and CSV files and read the data inside of them and
+                automatically extract the measurement information for each clothing per size. This
+                integrated .net 9 and Python together, since Python has some strong tools for this.
+              </p>
+            </div>
+            <div class="grid-box project-grid-title">
+              <h2>Backend</h2>
+              <p>
+                In this section I will talk in depth about what I did on each of the backend parts
+                of the Shopify apps of utry.
+              </p>
+            </div>
+            <div class="grid-box project-grid-title">
+              <p>
+                The backend of UTRY is made with .net 9 and EF core, using various other tools such
+                as docker. Where it is hosted on Azure, while my experience with Azure is not quite
+                where I want it to be, I do know how to set and update the keyvault.
+              </p>
+              <p>
+                We also had a CI/CD pipeline set up such that our staging and production environment
+                is protected from random pushes and pull requests.
+              </p>
+              <p>
+                A large amount of the work I put in initially into the backend was designing and
+                modelling the database.
+              </p>
             </div>
           </div>
         </div>
@@ -100,7 +219,11 @@
 
 .header-section {
   width: 100%;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+  h1 {
+    padding: 0;
+    font-size: 4rem;
+  }
 }
 
 .utry-section-container {
@@ -152,7 +275,16 @@
   padding: 20px;
   font-size: 1rem;
 }
-
+.implement-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-left: 1.6rem;
+  margin-top: 1rem;
+  .li {
+    padding-bottom: 1rem;
+  }
+}
 /* Mobile responsiveness */
 @media (max-width: 768px) {
   .nested-projects-grid {
