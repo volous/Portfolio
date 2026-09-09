@@ -1,5 +1,4 @@
 <script setup>
-import DuckComponent from '@/components/DuckComponent.vue'
 import { RouterLink } from 'vue-router'
 </script>
 
@@ -7,27 +6,22 @@ import { RouterLink } from 'vue-router'
   <section class="hero-container">
     <div class="hero-inner-container">
       <div class="hero-status-title">
-        <!-- Status Badge -->
         <div class="status-badge">
           <span class="status-dot"></span>
           <span>Available for new opportunities</span>
         </div>
       </div>
-      <!-- Main Headline -->
+
       <div class="hero-title-container">
         <h1 class="hero-title">Hi, I'm <span class="highlight">Thomas Lindhardt.</span></h1>
-        <img class="image" src="/public/image/Thomas.png" />
-        <!-- Short Bio -->
+        <img class="image" src="/image/Thomas.png" alt="Thomas Lindhardt" />
         <p class="hero-bio">
-          <!-- Software developer specializing in modern frontend systems and C# / .NET backends. Focused
-          on crafting clean, performant interfaces and scalable digital experiences. -->
-          Fullstack software developer with a wide variety of skills. <br />
-          Such as <span class="highlight">.Net, JavaScript, css, html, REST and Docker.</span>
+          Fullstack software developer with a wide variety of skills.<br />
+          Such as <span class="highlight">.NET, JavaScript, CSS, HTML, REST, and Docker.</span>
         </p>
       </div>
     </div>
 
-    <!-- Call to Action Buttons -->
     <div class="hero-actions">
       <RouterLink to="/projects" class="btn btn-primary">
         View Projects
@@ -46,10 +40,7 @@ import { RouterLink } from 'vue-router'
           <path d="m12 5 7 7-7 7"></path>
         </svg>
       </RouterLink>
-
       <RouterLink to="/contact" class="btn btn-secondary"> Get in Touch </RouterLink>
-
-      <!-- External GitHub Link -->
       <a
         href="https://github.com/volous"
         target="_blank"
@@ -77,7 +68,7 @@ import { RouterLink } from 'vue-router'
     </div>
 
     <div class="project-grid-main">
-      <h3>What am i working on currently?</h3>
+      <h3>What am I working on currently?</h3>
       <ul class="implement-list">
         <li>This website.</li>
         <li>Danish translation of this website.</li>
@@ -92,34 +83,33 @@ import { RouterLink } from 'vue-router'
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
-}
-.hero-inner-container {
-  display: flex;
-  flex-direction: row;
   width: 100%;
-  justify-content: center;
-}
-.hero-status-title {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 50%;
 }
 
-/* Status Badge */
+.hero-inner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 1.5rem;
+}
+
+.hero-status-title {
+  display: flex;
+  justify-content: center;
+}
+
 .status-badge {
   display: inline-flex;
   align-items: center;
   gap: 0.8rem;
-  padding: 0.8rem 0.5rem;
+  padding: 0.5rem 1rem;
   background-color: rgba(62, 175, 124, 0.1);
   border: 1px solid rgba(62, 175, 124, 0.25);
   border-radius: 18px;
   font-size: 0.85rem;
   font-weight: 500;
   color: #3eaf7c;
-  height: fit-content;
-  align-self: flex-start;
 }
 
 .status-dot {
@@ -129,59 +119,55 @@ import { RouterLink } from 'vue-router'
   border-radius: 50%;
   box-shadow: 0 0 8px #3eaf7c;
 }
+
 .hero-title-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin-right: 25rem;
+  max-width: 800px;
 }
-/* Headline */
+
 .hero-title {
-  font-size: clamp(2.5rem, 5vw, 3.75rem);
+  font-size: clamp(2rem, 5vw, 3.75rem);
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: -0.03em;
   color: #ffffff;
-  margin-bottom: 0;
-  margin-top: 0;
   text-align: center;
 }
+
 .image {
-  width: 30%;
-  align-self: center;
-  justify-self: center;
-  margin: 1rem 0;
+  max-width: 180px;
+  width: 100%;
+  height: auto;
+  border-radius: 20%;
+  margin: 1.5rem 0;
 }
+
 .highlight {
   background: linear-gradient(135deg, #3eaf7c 0%, #42d392 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* Bio Text */
 .hero-bio {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   line-height: 1.6;
   color: #a1a1aa;
   max-width: 650px;
   text-align: center;
 }
 
-/* Action Buttons Group */
 .hero-actions {
   display: flex;
   align-items: center;
   gap: 1rem;
   margin-top: 1rem;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
-.email-link {
-  color: #25257e;
-}
-
-/* Base Button Styles */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -195,7 +181,6 @@ import { RouterLink } from 'vue-router'
   cursor: pointer;
 }
 
-/* Primary CTA */
 .btn-primary {
   background-color: #3eaf7c;
   color: #09090b;
@@ -206,7 +191,6 @@ import { RouterLink } from 'vue-router'
   transform: translateY(-2px);
 }
 
-/* Secondary CTA */
 .btn-secondary {
   background-color: rgba(255, 255, 255, 0.05);
   color: #ffffff;
@@ -219,7 +203,6 @@ import { RouterLink } from 'vue-router'
   transform: translateY(-2px);
 }
 
-/* Icon Button (GitHub / Socials) */
 .btn-icon {
   padding: 0.75rem;
   background-color: rgba(255, 255, 255, 0.05);
@@ -234,11 +217,22 @@ import { RouterLink } from 'vue-router'
   transform: translateY(-2px);
 }
 
-/* Responsive Adjustments */
+.project-grid-main {
+  width: 100%;
+  max-width: 800px;
+  background-color: #1e2424;
+  border: 1px solid #535a5a;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-top: 1rem;
+}
+
+.implement-list {
+  padding-left: 1.4rem;
+  margin-top: 0.75rem;
+}
+
 @media (max-width: 640px) {
-  .hero-container {
-    padding: 2rem 0;
-  }
   .hero-actions {
     width: 100%;
   }
@@ -247,24 +241,16 @@ import { RouterLink } from 'vue-router'
     flex: 1;
     justify-content: center;
   }
-}
+  .project-grid-main {
+    padding: 1.25rem;
+  }
 
-.utry-projects-grid {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
-}
-
-/* Big container card with custom color */
-.project-grid-main {
-  grid-column: 1;
-  background-color: #1e2424; /* Distinct background color */
-  border: 1px solid #535a5a; /* Subtle border */
-  border-radius: 12px;
-  padding: 49px;
-}
-
-.implement-list {
-  padding-left: 1.4rem;
+  .image {
+    max-width: 180px;
+    width: 100%;
+    height: auto;
+    border-radius: 20%;
+    margin: 1.5rem 0;
+  }
 }
 </style>
